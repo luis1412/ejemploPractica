@@ -7,6 +7,7 @@ package com.mycompany.practicaexamen;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -45,7 +46,7 @@ public class Estudiantes implements Serializable {
     private String nombre;
     @Column(name = "edad")
     private Integer edad;
-    @OneToMany(mappedBy = "estudianteId")
+    @OneToMany(mappedBy = "estudianteId", cascade = CascadeType.ALL)
     private List<Inscripciones> inscripcionesList;
     @JoinColumn(name = "profesor_id", referencedColumnName = "profesor_id")
     @ManyToOne

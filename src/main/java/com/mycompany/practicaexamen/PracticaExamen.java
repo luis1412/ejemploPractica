@@ -18,14 +18,14 @@ public class PracticaExamen {
     
         Conector ca = new Conector();
     
-        Inscripciones in = new Inscripciones();
-        Cursos c = new Cursos(1);
-        Estudiantes e = new Estudiantes(1);
-        in.setCursoId(c);
-        in.setEstudianteId(e);
-        in.setFechaInscripcion(new Date());
-        ca.Insertar(in);
-    
+      
+         ca.borrarCurso(new Cursos(2));
+ 
+  
+       /* 
+        Estudiantes e = new Estudiantes(2);
+        ca.borrar(e);
+    */
     }
     
     
